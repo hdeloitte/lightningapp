@@ -1,0 +1,91 @@
+<aura:component controller="DonationTracker" implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:registerEvent name="appEvent" type="c:donationEvent"/>
+    <aura:attribute name="newDonation" type="Donation__c"
+                    default="{ 'sobjectType': 'Donation__c',
+                             'Donar_Name__c': '',
+                             'Amount__c': 10,
+                             'Note__c': '',
+                             'Donation_Date__c': ''}"/>
+    <div class="slds">
+        <!-- PAGE HEADER -->
+        <div class="slds-page-header" role="banner">
+            <div class="slds-grid">
+                <div class="slds-col">
+                    <p class="slds-text-heading--label">Donation</p>
+                    <h1 class="slds-text-heading--medium">Donation Form</h1>
+                </div>
+            </div>
+        </div>
+        <!-- / PAGE HEADER -->
+        <div aria-labelledby="newDonationForm">
+            
+            <!-- BOXED AREA -->
+            <div id="donationform" class="slds-form--stacked">
+                
+                <legend id="newdonationform" class="slds-text-heading--small slds-p-vertical--medium slds-m-left--medium">
+                    Add Donation
+                </legend>
+                
+                <!-- CREATE NEW EXPENSE FORM -->
+                <form class="slds-form--stacked slds-m-left--medium">
+                    
+                    <div class="slds-form-element slds-is-required">
+                        <div class="slds-form-element__control">
+                            <ui:inputText aura:id="donorname" label="Donor Name"
+                                          class="slds-input"
+                                          labelClass="slds-form-element__label"
+                                          value="{!v.newDonation.Donar_Name__c}"
+                                          required="true"/>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element slds-is-required">
+                        <div class="slds-form-element__control">
+                            <ui:inputNumber aura:id="amount" label="Amount"
+                                            class="slds-input"
+                                            labelClass="slds-form-element__label"
+                                            value="{!v.newDonation.Amount__c}"
+                                            required="true"/>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <ui:inputDate aura:id="expdate" label="Donation Date"
+                                          class="slds-input"
+                                          labelClass="slds-form-element__label"
+                                          value="{!v.newDonation.Donation_Date__c}"
+                                          displayDatePicker="true"/>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <ui:inputText aura:id="client" label="Notes"
+                                          class="slds-input"
+                                          labelClass="slds-form-element__label"
+                                          value="{!v.newDonation.Note__c}"
+                                          placeholder="Notes"/>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="slds-form-element">
+                        
+                    </div>
+                    
+                </form>
+                <!-- / CREATE NEW Donation FORM -->
+                
+                <lightning:button label="Create Donation" variant="neutral" onclick="{!c.clickCreateDonation}"/>
+                
+            </div>
+            <!-- / BOXED AREA -->
+            
+        </div>
+        <!-- / CREATE NEW Donation -->
+        
+        
+    </div>
+</aura:component>

@@ -1,0 +1,10 @@
+<aura:component controller="DonationTracker">
+    <ltng:require scripts="{!join(',',
+    $Resource.sdls + '/assets/js/jquery.min.js',
+    $Resource.sdls + '/assets/js/highcharts.js',
+    $Resource.sdls + '/assets/js/highcharts-more.js',
+    $Resource.sdls + '/assets/js/solid-gauge.js')}" afterScriptsLoaded="{!c.loadchartDetails}"/>
+    
+	<aura:handler event="c:donationEvent" action="{!c.updateChart}"/>
+    <div id="container-donation" style="width: 300px; height: 200px;margin-left: 56px;"></div>
+</aura:component>
