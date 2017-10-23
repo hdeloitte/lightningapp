@@ -6,5 +6,4 @@ This app will demo basic lightning capability.
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
-<img src="images/screenshot.png"/>
-[[https://github.com/hsfdc/lightningapp/blob/master/images/screenshot.PNG|alt=homepage]]
+![home](https://github.com/hsfdc/lightningapp/blob/master/images/screenshot.PNG)
