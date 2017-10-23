@@ -7,4 +7,4 @@ This app will demo basic lightning capability.
 </a>
 
 <img src="images/screenshot.png"/>
-[[https://github.com/hsfdc/lightningapp/tree/master/images/screenshot.PNG|alt=homepage]]
+[[https://github.com/hsfdc/lightningapp/blob/master/images/screenshot.PNG|alt=homepage]]
