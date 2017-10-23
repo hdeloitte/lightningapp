@@ -6,6 +6,7 @@
   		var jy = jQuery.noConflict();      
         action.setCallback(this, function(actionResult) {
             //chart
+            
             helper.drawChart(actionResult.getReturnValue());
             //
             
@@ -20,7 +21,7 @@
         // set the handler attributes based on event data
         if(message=='insert'){
         	//chart
-            helper.updateChart((parseInt(jy('.totalAm').text()) + event.getParam("amount")));
+            helper.updateChart(event.getParam("amount"));
         }
         
 	}

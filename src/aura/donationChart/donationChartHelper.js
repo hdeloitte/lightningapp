@@ -57,9 +57,9 @@
              jy('#container-donation').highcharts(Highcharts.merge(gaugeOptions, {
         yAxis: {
             min: 0,
-            max: 200,
+            max: 20000,
             title: {
-                text: 'Speed'
+                text: 'Donation Received'
             }
         },
 
@@ -83,13 +83,16 @@
     }));
 	},
     updateChart : function(donationAmount) { 
-         var jy = jQuery.noConflict();
+        debugger; 
+        var jy = jQuery.noConflict();
          var chart = jy('#container-donation').highcharts(),
             point,
             newVal,
             inc;
-        point = chart.series[0].points[0];
-        point.update(donationAmount);
+		point = chart.series[0].points[0];
+        newVal = point.y + donationAmount;
+        //point = parseInt(point.y) +  donationAmount;
+        point.update(newVal);
     }
     
 })
