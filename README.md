@@ -5,5 +5,7 @@ This app will demo basic lightning capability.
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
-
+<br/>
+<br/>
+<br/>
 ![home](https://github.com/hsfdc/lightningapp/blob/master/images/screenshot.PNG)
