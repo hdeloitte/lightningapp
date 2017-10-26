@@ -8,3 +8,15 @@ This app will demo basic lightning capability.
 
 ![screenshot](https://user-images.githubusercontent.com/32835724/32058204-0a9f8c08-ba87-11e7-82ca-fd46861b61f5.PNG)
 
+Prerequisite 
+-------------
+
+- Custom Domain
+
+
+Documentation 
+-------------
+
+- Create Remote Site setting (Setup->Remote Site Settings) (https://donationtracker.herokuapp.com)
+- open app by https://INSTANCEURL/c/DonationTracker.app
+
