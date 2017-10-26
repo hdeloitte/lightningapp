@@ -3,7 +3,7 @@
     
     
 	 <aura:attribute name="messageFromEvent" type="String"/>
-    <aura:attribute name="numEvents" type="Integer" default="0"/>
+    
     <aura:handler event="c:donationEvent" action="{!c.updateDonationDetails}"/>
     
     

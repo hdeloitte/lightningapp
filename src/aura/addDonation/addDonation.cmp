@@ -32,7 +32,7 @@
                     <div class="slds-form-element slds-is-required">
                         <div class="slds-form-element__control">
                             <ui:inputText aura:id="donorname" label="Donor Name"
-                                          class="slds-input"
+                                          class="slds-input" maxlength="20"
                                           labelClass="slds-form-element__label"
                                           value="{!v.newDonation.Donar_Name__c}"
                                           required="true"/>
@@ -42,10 +42,12 @@
                     <div class="slds-form-element slds-is-required">
                         <div class="slds-form-element__control">
                             <ui:inputNumber aura:id="amount" label="Amount"
-                                            class="slds-input"
+                                            class="slds-input" maxlength="3"
                                             labelClass="slds-form-element__label"
                                             value="{!v.newDonation.Amount__c}"
-                                            required="true"/>
+                                            required="true" />
+                            
+
                             
                         </div>
                     </div>
@@ -86,6 +88,6 @@
         </div>
         <!-- / CREATE NEW Donation -->
         
-        
+        <lightning:spinner aura:id="spinner" variant="brand" size="large" class="slds-hide"/>
     </div>
 </aura:component>
