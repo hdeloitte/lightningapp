@@ -25,7 +25,7 @@
             inputCmp.set("v.errors", []);
         }
         
-        return false;
+        
 	    var spinner = component.find("spinner");
 		$A.util.removeClass(spinner, "slds-hide");
         $A.util.addClass(spinner, "slds-show");
