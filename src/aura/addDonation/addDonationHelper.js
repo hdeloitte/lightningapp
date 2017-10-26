@@ -1,7 +1,31 @@
 ({
     createDonation:function(component,donation,event)
     {
-         
+        //amount validation
+        if(donation.Amount__c>100){
+            var inputCmp  = component.find('amount');
+            inputCmp.set("v.errors", [{message:"Donation amount should be less than 100"}]);
+            return false;
+        }
+        else
+        {
+           var inputCmp  = component.find('amount');
+            inputCmp.set("v.errors", []);
+        }
+        
+        //date validation
+        if(donation.Donation_Date__c==''){
+            var inputCmp  = component.find('expdate');
+            inputCmp.set("v.errors", [{message:"Please select date"}]);
+            return false;
+        }
+        else
+        {
+           var inputCmp  = component.find('expdate');
+            inputCmp.set("v.errors", []);
+        }
+        
+        return false;
 	    var spinner = component.find("spinner");
 		$A.util.removeClass(spinner, "slds-hide");
         $A.util.addClass(spinner, "slds-show");
@@ -22,6 +46,8 @@
             $A.util.removeClass(spinner, "slds-show");
         });
         $A.enqueueAction(action); 
+        
+        
     }
 
 })
